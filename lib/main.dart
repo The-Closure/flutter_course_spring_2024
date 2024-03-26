@@ -35,14 +35,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,7 +158,6 @@ class _HomePageState extends State<HomePage> {
                   } else {
                     await context.setLocale(const Locale('ar'));
                   }
-                  setState(() {});
                 },
                 child: Text(AppStrings().CHANGE_LANGUAGE))
           ],
